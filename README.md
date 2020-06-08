@@ -36,7 +36,7 @@ at the same time) for generating a random output which is used for computer's tu
  
 - Whenever the system detects that the user's input might need scrutiny, the user's input and system's response to the user can be entangled. They can remain in entangled state until the user activity returns to normal state.
 
-- I would like to know if the above use-case can make use of Entanglement property. 
+- **Query** : I would like to know if the above use-case can make use of Entanglement property. 
 
 
 ## References
