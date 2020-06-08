@@ -11,17 +11,15 @@ To run the unit tests via command line from cloned repository
 ```
 
 ## Game rules
-```
 This is a game of Rock, Paper, Scissors played by user against the computer.
 
 Rules: You and the computer both choose rock, paper or scissors. The winner is decided by these rules:
 Rock blunts scissors
 Paper covers rock
 Scissors cuts paper
-```
+
 
 ## Game implementation
-```
 - The project uses the quantum computing property - "Superposition" (the idea that a quantum object can exist in multiple states 
 at the same time) for generating a random output which is used for computer's turn in the game.
 
@@ -38,7 +36,6 @@ at the same time) for generating a random output which is used for computer's tu
 - Whenever the system detects that the user's input might need scrutiny, the user's input and system's response to the user can be entangled. They can remain in entangled state until the user activity returns to normal state.
 
 - I would like to know if the above use-case can make use of entanglement property. 
-```
 
 
 ## References
