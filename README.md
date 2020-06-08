@@ -9,6 +9,7 @@ To run the application via command line from cloned repository
 To run the unit tests via command line from cloned repository
 > python -m unittest -v unitTests.py
 ```
+**Note**: Enter your qiskit API token in QuantumRandomNumber.py file line
 
 ## Game rules
 This is a game of Rock, Paper, Scissors played by user against the computer.
