@@ -14,10 +14,11 @@ To run the unit tests via command line from cloned repository
 This is a game of Rock, Paper, Scissors played by user against the computer.
 
 **Rules**: You and the computer both choose rock, paper or scissors. The winner is decided by these rules:
+```
 Rock blunts scissors
 Paper covers rock
 Scissors cuts paper
-
+```
 
 ## Game implementation
 - The project uses the quantum computing property - **Superposition** (the idea that a quantum object can exist in multiple states 
