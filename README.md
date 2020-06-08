@@ -1,7 +1,7 @@
 # RockPaperScissorQuantum
 Built a version of RockPaperScissor game using quantum superposition property
 
-## Steps to execute
+### Steps to execute
 ```
 To run the application via command line from cloned repository
 > python RockPaperScissors.py
@@ -20,14 +20,16 @@ Paper covers rock
 Scissors cuts paper
 ```
 
-## Process description
+## Game implementation
 ```
-- The project uses the quantum computing property - "Superposition" (the idea that a quantum object can exist in multiple states at the same time) for generating a random output which is used for computer's turn in the game.
+- The project uses the quantum computing property - "Superposition" (the idea that a quantum object can exist in multiple states 
+at the same time) for generating a random output which is used for computer's turn in the game.
 
 - The user's input is collected by a UI widget.
 
 - Trick case: 
-  If the user tries to play/win using the same input consecutively more than 3 times, the computer also mimics the user's input creating a dead-end until the user changes his input
+  If the user tries to play/win using the same input consecutively more than 3 times, the computer also mimics the user's input 
+  creating a dead-end until the user changes his input
  
  - This feature can find use when in industries where an automated bot/hacker tries to retrieve or win a game by repeatedly using the input which worked previously. 
  
@@ -37,7 +39,6 @@ Scissors cuts paper
 
 - I would like to know if the above use-case can make use of entanglement property. 
 ```
-
 
 
 ## References
