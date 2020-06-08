@@ -6,7 +6,7 @@ Created on Mon Jun  8 08:48:30 2020
 """
 
 import unittest
-
+import profile
 from RockPaperScissors import RockPaperScissors
 
 class TestRockPaperScissors(unittest.TestCase):
@@ -89,44 +89,120 @@ class TestRandomComputerChoice(TestRockPaperScissors):
           self.assertIn(self.rps.random_computer_choice(), ['rock', 'paper', 'scissor'])
 
 class TestResult(TestRockPaperScissors):
-      def test_tie_case(self):
+      def test_tie_case_rock(self):
           self.rps.result('rock', 'rock')
           self.assertEqual(self.rps.WINNER, 'Tie')
 
-      def test_tie_user_score(self):
+      def test_tie_user_score_rock(self):
           self.rps.result('rock', 'rock')
           self.assertEqual(self.rps.USER_SCORE, self.rps.USER_SCORE)
  
-      def test_tie_computer_score(self):
+      def test_tie_computer_score_rock(self):
           self.rps.result('rock', 'rock')
           self.assertEqual(self.rps.COMP_SCORE, self.rps.COMP_SCORE)
-          
-      def test_user_win_case(self):
+
+      def test_tie_case_paper(self):
+          self.rps.result('paper', 'paper')
+          self.assertEqual(self.rps.WINNER, 'Tie')
+
+      def test_tie_user_score_paper(self):
+          self.rps.result('paper', 'paper')
+          self.assertEqual(self.rps.USER_SCORE, self.rps.USER_SCORE)
+ 
+      def test_tie_computer_score_paper(self):
+          self.rps.result('paper', 'paper')
+          self.assertEqual(self.rps.COMP_SCORE, self.rps.COMP_SCORE)
+
+      def test_tie_case_scissor(self):
+          self.rps.result('scissor', 'scissor')
+          self.assertEqual(self.rps.WINNER, 'Tie')
+
+      def test_tie_user_score_scissor(self):
+          self.rps.result('scissor', 'scissor')
+          self.assertEqual(self.rps.USER_SCORE, self.rps.USER_SCORE)
+ 
+      def test_tie_computer_score_scissor(self):
+          self.rps.result('scissor', 'scissor')
+          self.assertEqual(self.rps.COMP_SCORE, self.rps.COMP_SCORE)
+        
+      def test_user_win_case_rock_scissor(self):
           self.rps.result('rock', 'scissor')
           self.assertEqual(self.rps.WINNER, 'You win')
 
-      def test_user_win_user_score(self):
+      def test_user_win_user_score_rock_scissor(self):
           prev_USER_SCORE = self.rps.USER_SCORE
           self.rps.result('rock', 'scissor')
           self.assertEqual(self.rps.USER_SCORE, prev_USER_SCORE+1)
  
-      def test_user_win_computer_score(self):
+      def test_user_win_computer_score_rock_scissor(self):
           self.rps.result('rock', 'scissor')
           self.assertEqual(self.rps.COMP_SCORE, self.rps.COMP_SCORE)
-          
-      def test_computer_wins_case(self):
+ 
+      def test_user_win_case_paper_rock(self):
+          self.rps.result('paper', 'rock')
+          self.assertEqual(self.rps.WINNER, 'You win')
+
+      def test_user_win_user_score_paper_rock(self):
+          prev_USER_SCORE = self.rps.USER_SCORE
+          self.rps.result('paper', 'rock')
+          self.assertEqual(self.rps.USER_SCORE, prev_USER_SCORE+1)
+ 
+      def test_user_win_computer_score_paper_rock(self):
+          self.rps.result('paper', 'rock')
+          self.assertEqual(self.rps.COMP_SCORE, self.rps.COMP_SCORE)
+
+      def test_user_win_case_scissor_paper(self):
+          self.rps.result('scissor', 'paper')
+          self.assertEqual(self.rps.WINNER, 'You win')
+
+      def test_user_win_user_score_scissor_paper(self):
+          prev_USER_SCORE = self.rps.USER_SCORE
+          self.rps.result('scissor', 'paper')
+          self.assertEqual(self.rps.USER_SCORE, prev_USER_SCORE+1)
+ 
+      def test_user_win_computer_score_scissor_paper(self):
+          self.rps.result('scissor', 'paper')
+          self.assertEqual(self.rps.COMP_SCORE, self.rps.COMP_SCORE)
+
+      def test_computer_wins_case_scissor_rock(self):
+          self.rps.result('scissor', 'rock')
+          self.assertEqual(self.rps.WINNER, 'Computer wins')          
+      
+      def test_computer_win_user_score_scissor_rock(self):
+          self.rps.result('scissor', 'rock')
+          self.assertEqual(self.rps.USER_SCORE, self.rps.USER_SCORE)
+ 
+      def test_computer_win_computer_score_scissor_rock(self):
+          prev_COMPUTER_SCORE = self.rps.COMP_SCORE
+          self.rps.result('scissor', 'rock')
+          self.assertEqual(self.rps.COMP_SCORE, prev_COMPUTER_SCORE+1)
+     
+      def test_computer_wins_case_rock_paper(self):
           self.rps.result('rock', 'paper')
           self.assertEqual(self.rps.WINNER, 'Computer wins')          
       
-      def test_computer_win_user_score(self):
+      def test_computer_win_user_score_rock_paper(self):
           self.rps.result('rock', 'paper')
           self.assertEqual(self.rps.USER_SCORE, self.rps.USER_SCORE)
  
-      def test_computer_win_computer_score(self):
+      def test_computer_win_computer_score_rock_paper(self):
           prev_COMPUTER_SCORE = self.rps.COMP_SCORE
           self.rps.result('rock', 'paper')
           self.assertEqual(self.rps.COMP_SCORE, prev_COMPUTER_SCORE+1)
-         
+
+      def test_computer_wins_case_paper_scissor(self):
+          self.rps.result('paper', 'scissor')
+          self.assertEqual(self.rps.WINNER, 'Computer wins')          
+      
+      def test_computer_win_user_score_paper_scissor(self):
+          self.rps.result('paper', 'scissor')
+          self.assertEqual(self.rps.USER_SCORE, self.rps.USER_SCORE)
+ 
+      def test_computer_win_computer_score_paper_scissor(self):
+          prev_COMPUTER_SCORE = self.rps.COMP_SCORE
+          self.rps.result('paper', 'scissor')
+          self.assertEqual(self.rps.COMP_SCORE, prev_COMPUTER_SCORE+1)
+          
 class TestAction(TestRockPaperScissors):
       def test_case_repeatInputs(self):
           self.rps.inputs = ['rock', 'paper', 'scissor', 'rock', 'rock']
@@ -143,4 +219,5 @@ class TestQuantumRandomNumber(TestRockPaperScissors):
           self.assertIn((self.rps.qrand.rand_int())%3, [0, 1, 2])
           
 if __name__ == '__main__':
-    unittest.main()
+    unittest.main()   
+    profile.run('main()')
