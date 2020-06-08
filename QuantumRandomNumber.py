@@ -9,7 +9,7 @@ import qiskit as qk
 from qiskit import IBMQ
 
 #Add your Qiskit API token below
-#IBMQ.save_account('0bab1b8ae71f47561a135706a33012b3c8d37077df31f351f8ac365c43e2ae7572de93ea4b960d6cbc68572219a42e17e154194364afd2a12f44d88b1bafbb04')
+#IBMQ.save_account('')
 
 # Load saved account from memory
 IBMQ.load_account()
