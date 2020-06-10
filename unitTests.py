@@ -82,10 +82,6 @@ class TestNumberToChoice(TestRockPaperScissors):
           
       def test_number_to_choice_2(self):                
           self.assertEqual(self.rps.number_to_choice(2) , 'scissor') 
-          
-class TestRandomComputerChoice(TestRockPaperScissors):
-      def test_random_computer_choice(self):
-          self.assertIn(self.rps.random_computer_choice(), ['rock', 'paper', 'scissor'])
 
 class TestResult(TestRockPaperScissors):
       def test_tie_case_rock(self):
