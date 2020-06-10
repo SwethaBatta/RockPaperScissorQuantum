@@ -47,13 +47,7 @@ class RockPaperScissors(object):
     def number_to_choice(self, number):
         rps={0:'rock',1:'paper',2:'scissor'}
         return rps[number]
-    
-    '''
-    Using python's random.choice() function to select an output for computer's choice
-    '''
-    def random_computer_choice(self):
-        return random.choice(['rock','paper','scissor']) 
-       
+
     '''
     Computes the score and displays in widget
     '''
