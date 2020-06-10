@@ -6,7 +6,6 @@ Created on Mon Jun  8 08:48:30 2020
 """
 
 import unittest
-import profile
 from RockPaperScissors import RockPaperScissors
 
 class TestRockPaperScissors(unittest.TestCase):
@@ -220,4 +219,3 @@ class TestQuantumRandomNumber(TestRockPaperScissors):
           
 if __name__ == '__main__':
     unittest.main()   
-    profile.run('main()')
